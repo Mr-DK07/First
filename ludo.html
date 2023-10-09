@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        align-items: center;
+        margin: 10px 250px;
+      }
+      #ludo {
+        height: 750px;
+        width: 750px;
+        border: 2px solid black;
+        box-sizing: border-box;
+      }
+      .a {
+        height: 300px;
+        width: 750px;
+      }
+      .b {
+        height: 150px;
+        width: 750px;
+      }
+
+      .a2 {
+        height: 300px;
+        width: 150px;
+        float: left;
+      }
+      .b1 {
+        height: 150px;
+        width: 50px;
+        float: left;
+      }
+      .b2 {
+        grid-column: 7/10;
+        grid-row: 7/10;
+        width: 0px;
+        height: 0px;
+        border-top: 75px solid red;
+        border-bottom: 75px solid yellow;
+        border-left: 75px solid blue;
+        border-right: 75px solid green;
+        float: left;
+      }
+      .b3 {
+        height: 50px;
+        width: 150px;
+        float: left;
+      }
+      .g {
+        height: 50px;
+        width: 50px;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 70px;
+        font-size: 80px;
+        color: black;
+        font-weight: 900;
+      }
+      .g1 {
+        height: 50px;
+        width: 50px;
+        background: blue;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 70px;
+        font-size: 80px;
+        color: black;
+        font-weight: 900;
+        box-shadow: 4px 4px 5px inset rgb(90, 142, 219);
+      }
+      .g2 {
+        height: 50px;
+        width: 50px;
+        background: red;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 70px;
+        font-size: 80px;
+        color: black;
+        font-weight: 900;
+        box-shadow: -4px 4px 8px inset rgb(255, 247, 93);
+      }
+      .g3 {
+        height: 50px;
+        width: 50px;
+        background: yellow;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 70px;
+        font-size: 80px;
+        color: black;
+        font-weight: 900;
+        box-shadow: 4px -4px 5px inset rgb(220, 220, 94);
+      }
+      .g4 {
+        height: 50px;
+        width: 50px;
+        background: green;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 70px;
+        font-size: 80px;
+        color: black;
+        font-weight: 900;
+        box-shadow: -4px -4px 5px inset rgb(46, 206, 158);
+      }
+      .blue {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        float: left;
+        border: 50px solid blue;
+      }
+      .red {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        float: left;
+        border: 50px solid red;
+      }
+      .yellow {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        float: left;
+        border: 50px solid yellow;
+      }
+      .green {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        float: left;
+        border: 50px solid green;
+      }
+      .blue1 {
+        height: 100px;
+        width: 200px;
+      }
+      .box1 {
+        height: 50px;
+        width: 50px;
+        background: blue;
+        border: 25px solid white;
+        box-shadow: 4px 4px 5px inset rgb(96, 152, 236);
+      }
+      .box2 {
+        height: 50px;
+        width: 50px;
+        background: blue;
+        border: 25px solid white;
+        box-shadow: 4px 4px 5px inset rgb(96, 152, 236);
+      }
+      .red1 {
+        height: 100px;
+        width: 200px;
+      }
+      .rbox1 {
+        height: 50px;
+        width: 50px;
+        background: red;
+        border: 25px solid white;
+        box-shadow: -4px 4px 8px inset rgb(255, 247, 93);
+      }
+      .rbox2 {
+        height: 50px;
+        width: 50px;
+        background: red;
+        border: 25px solid white;
+        box-shadow: -4px 4px 8px inset rgb(255, 247, 93);
+      }
+      .yellow1 {
+        height: 100px;
+        width: 200px;
+      }
+      .ybox1 {
+        height: 50px;
+        width: 50px;
+        background: yellow;
+        border: 25px solid white;
+        box-shadow: 4px -4px 5px inset rgb(215, 228, 44);
+      }
+      .ybox2 {
+        height: 50px;
+        width: 50px;
+        background: yellow;
+        border: 25px solid white;
+        box-shadow: 4px -4px 5px inset rgb(215, 228, 44);
+      }
+      .green1 {
+        height: 100px;
+        width: 200px;
+      }
+      .gbox1 {
+        height: 50px;
+        width: 50px;
+        background: green;
+        border: 25px solid white;
+        box-shadow: -4px -4px 5px inset rgb(200, 244, 244);
+      }
+      .gbox2 {
+        height: 50px;
+        width: 50px;
+        background: green;
+        border: 25px solid white;
+        box-shadow: -4px -4px 5px inset rgb(200, 244, 244);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ludo">
+      <div class="a">
+        <div class="blue">
+          <div class="blue1">
+            <div class="box1"></div>
+            <div class="box1"></div>
+          </div>
+          <div class="blue1">
+            <div class="box2"></div>
+            <div class="box2"></div>
+          </div>
+        </div>
+        <div class="a2">
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g2"></div>
+          <div class="g2">*</div>
+          <div class="g">*</div>
+          <div class="g2"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g2"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g2"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g2"></div>
+          <div class="g"></div>
+        </div>
+
+        <div class="red">
+          <div class="red1">
+            <div class="rbox1"></div>
+            <div class="rbox1"></div>
+          </div>
+          <div class="red1">
+            <div class="rbox2"></div>
+            <div class="rbox2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="b">
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g1">*</div>
+          <div class="g1"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g1"></div>
+          <div class="g">*</div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g1"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g1"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g1"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b2"></div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g4"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g4"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g4"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g">*</div>
+          <div class="g4"></div>
+          <div class="g"></div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g4"></div>
+          <div class="g4">*</div>
+        </div>
+        <div class="b1">
+          <div class="g"></div>
+          <div class="g"></div>
+          <div class="g"></div>
+        </div>
+      </div>
+
+      <div class="a">
+        <div class="yellow">
+          <div class="yellow1">
+            <div class="ybox1"></div>
+            <div class="ybox1"></div>
+          </div>
+          <div class="yellow1">
+            <div class="ybox2"></div>
+            <div class="ybox2"></div>
+          </div>
+        </div>
+        <div class="a2">
+          <div class="b3">
+            <div class="g"></div>
+            <div class="g3"></div>
+            <div class="g"></div>
+          </div>
+          <div class="b3">
+            <div class="g"></div>
+            <div class="g3"></div>
+            <div class="g"></div>
+          </div>
+          <div class="b3">
+            <div class="g"></div>
+            <div class="g3"></div>
+            <div class="g"></div>
+          </div>
+          <div class="b3">
+            <div class="g"></div>
+            <div class="g3"></div>
+            <div class="g">*</div>
+          </div>
+          <div class="b3">
+            <div class="g3">*</div>
+            <div class="g3"></div>
+            <div class="g"></div>
+          </div>
+          <div class="b3">
+            <div class="g"></div>
+            <div class="g"></div>
+            <div class="g"></div>
+          </div>
+        </div>
+        <div class="green">
+          <div class="green1">
+            <div class="gbox1"></div>
+            <div class="gbox1"></div>
+          </div>
+          <div class="green1">
+            <div class="gbox2"></div>
+            <div class="gbox2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

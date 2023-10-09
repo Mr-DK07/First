@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarkari Result</title>
+    <style>
+      .outer {
+        height: 900px;
+        width: 1150px;
+        background: #f8ffff;
+        box-sizing: border-box;
+        margin: 20px auto;
+      }
+      .heading {
+        height: 140px;
+        width: 1150px;
+        padding-top: 10px;
+        background: rgb(198, 11, 11);
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        border: none;
+        box-sizing: border-box;
+      }
+      h1 {
+        margin: 0px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .menu {
+        height: 40px;
+        width: 1150px;
+        box-sizing: border-box;
+      }
+      .menu ul li {
+        list-style-type: none;
+        float: left;
+        height: 40px;
+        width: 130px;
+        background: #000000;
+        margin-left: 3px;
+        text-align: center;
+        line-height: 40px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        color: white;
+      }
+      .txt {
+        height: 110px;
+        width: 1110px;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 12px;
+        line-height: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p1 {
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p2 {
+        color: blue;
+        word-spacing: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .tools {
+        height: 40px;
+        width: 250px;
+        background: blue;
+        color: white;
+        text-align: center;
+        padding-top: 6px;
+        box-sizing: border-box;
+        margin: 25px auto;
+        font-size: 22px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .green {
+        height: 40px;
+        width: 277px;
+        background: green;
+        float: left;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        padding-top: 8px;
+        box-sizing: border-box;
+        border-top: 3px solid white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .blue {
+        height: 40px;
+        width: 277px;
+        background: blue;
+        float: left;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        padding-top: 8px;
+        box-sizing: border-box;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-top: 3px solid white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .orange {
+        height: 40px;
+        width: 277px;
+        background: rgb(209, 113, 5);
+        float: left;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        padding-top: 8px;
+        box-sizing: border-box;
+        border-top: 3px solid white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .red {
+        height: 40px;
+        width: 277px;
+        background: rgb(129, 2, 2);
+        float: left;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        padding-top: 8px;
+        box-sizing: border-box;
+        border-left: 3px solid white;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .result {
+        height: 600px;
+        width: 350px;
+        margin-top: 40px;
+        float: left;
+        border: 2px solid red;
+        margin-right: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .admit {
+        height: 600px;
+        width: 350px;
+        margin-top: 40px;
+        float: left;
+        border: 2px solid red;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .job {
+        height: 600px;
+        width: 350px;
+        margin-top: 40px;
+        float: left;
+        border: 2px solid red;
+        margin-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .rs {
+        height: 30px;
+        width: 350px;
+        background: red;
+        box-sizing: border-box;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .img {
+        max-width: 0px;
+        max-height: 0px;
+      }
+      img {
+        height: 85px;
+        width: 85px;
+        padding-left: 40px;
+      }
+      .trust {
+        width: 1020px;
+        height: 360px;
+        border: 2px solid red;
+        float: left;
+        margin: 50px;
+        font-size: 25px;
+        line-height: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .trust1 {
+        height: 40px;
+        width: 1020px;
+        background: rgb(147, 1, 1);
+        color: white;
+        text-align: center;
+        padding-top: 2px;
+        font-weight: 600;
+      }
+      .trust2 {
+        height: 380px;
+        width: 1020px;
+        font-size: 16px;
+        color: black;
+        text-align: left;
+        padding: 10px;
+      }
+      .footer {
+        height: 400px;
+        height: 300px;
+        float: left;
+        margin-left: 55px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      .qlink {
+        height: 400px;
+        width: 250px;
+        float: left;
+        margin-left: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .app {
+        height: 400px;
+        width: 200px;
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .more {
+        height: 400px;
+        width: 250px;
+        float: left;
+        padding-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .a {
+        height: 400px;
+        width: 140px;
+        float: left;
+        padding-top: 65px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      .b {
+        height: 400px;
+        width: 140px;
+        float: left;
+        padding-top: 65px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+      }
+      h2 {
+        margin-left: 20px;
+      }
+      .link {
+        height: 570px;
+        width: 350px;
+        color: rgb(74, 82, 229);
+        font-size: 14px;
+        line-height: 19px;
+      }
+      .red:hover {
+        background: rgb(182, 126, 5);
+      }
+      .green:hover {
+        background: rgb(66, 225, 37);
+      }
+      .orange:hover {
+        background: rgb(189, 210, 50);
+      }
+      .blue:hover {
+        background: rgb(101, 138, 213);
+      }
+      div ul li:hover {
+        background: rgb(49, 211, 239);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="heading">
+        <div class="img"><img src="img/logo-new.webp" alt="" /></div>
+        <h1>SARKARI RESULT</h1>
+        <h1>WWW.SARKARIRESULT.COM</h1>
+        <nav class="menu">
+          <ul>
+            <li><a href=""> Home</a></li>
+            <li><a href="">Latest Jobs</a></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">Admit Card</a></li>
+            <li><a href="">Answer Key</a></li>
+            <li><a href="">Syllabus</a></li>
+            <li><a href="">Search</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="txt">
+        <p>
+          Sarkari Result: SarkariResult.Com Srakari Naukri Latest Jobs Online
+          Form at Sarkari Result 2023
+        </p>
+        <p1>Welcome to Indias No One Education Portal Sarkari Result</p1>
+      </div>
+
+      <p2
+        >Sarkari Result Android Apps || Sarkari Result Youtube Channel ||
+        Sarkari Result Apple / IOS apps || Follow Instagram</p2
+      >
+
+      <p2>
+        <marquee behavior="alternate" direction="">
+          UPRTOU Admission Online Form 2023 || EMRS TGT.Hostel Warden Online
+          Form 2023 || Allahabad University CUET Registration 2023</marquee
+        >
+      </p2>
+      <p2>
+        <marquee behavior="alternate" direction=""
+          >Rajsthan HC JPA Online Form 2023 || Sahara Refund Portal Online form
+          2023 || UP ANM GNM Online Form 2023
+        </marquee>
+      </p2>
+      <p2>
+        <marquee behavior="alternate" direction="">
+          AKTU UPTAC Online Counseling 2023 || NVS Class 6th Admission 2024 ||
+          UP NEET Online Counseling 2023
+        </marquee>
+      </p2>
+
+      <div class="tools">Sarkari Result Tools</div>
+
+      <div class="green">MP HSTST 2023 Admit Card</div>
+      <div class="blue">SSC Junior Engineer Apply Online</div>
+      <div class="orange">EMRS TGT Teacher Apply Online</div>
+      <div class="red">SSC CPO SI 2023 Apply Online</div>
+
+      <div class="orange">UPSSC Auditor Apply Online</div>
+      <div class="red">BPSC 69th Exam Apply Online</div>
+      <div class="green">Sahara Refund Portal 2023</div>
+      <div class="blue">SSC 10+2 CHSL Admit Card</div>
+
+      <div class="result">
+        <div class="rs">Result</div>
+        <div class="link">
+          <ul>
+            <li>
+              https://www.sarkariresult.com/upsssc/ssc-forest-wildlife-guard-05-2019/
+            </li>
+            <li>https://www.sarkariresult.com/2023/ofss-bihar-admission/</li>
+            <li>https://www.sarkariresult.com/2023/upneet-ug-2023/</li>
+            <li>https://www.sarkariresult.com/upsc/upsc-cms-2023/</li>
+            <li>https://www.sarkariresult.com/2023/up-iti-admissions/</li>
+            <li>
+              https://www.sarkariresult.com/rpsc/rpsc-senior-teacher-01-2022/
+            </li>
+            <li>https://www.sarkariresult.com/bihar/bpsc-cdpo-03-2021/</li>
+            <li>https://www.sarkariresult.com/bihar/bpsc-cdpo-03-2021/</li>
+            <li>
+              https://www.sarkariresult.com/bihar/patna-hc-assistant-feb23/
+            </li>
+            <li>
+              https://www.sarkariresult.com/bihar/patna-hc-assistant-feb23/
+            </li>
+            <li>https://www.sarkariresult.com/nta/nta-csir-net-june-2023/</li>
+            <li>
+              https://www.sarkariresult.com/2022/uppcl-computer-asst-08-2022/
+            </li>
+            <li>
+              https://www.sarkariresult.com/2022/rvunl-various-post-june22/
+            </li>
+            <li>https://www.sarkariresult.com/ssc/ssc-stenographer-2022/</li>
+          </ul>
+        </div>
+      </div>
+      <div class="admit">
+        <div class="rs">Admit Card</div>
+        <div class="link">
+          <ul>
+            <li>https://www.sarkariresult.com/upsc/upsc-ias-ifs-2023/</li>
+            <li>
+              https://www.sarkariresult.com/2023/nta-esic-steno-ssa-mar23/
+            </li>
+            <li>https://www.sarkariresult.com/2023/nta-aicte-apr23/</li>
+            <li>
+              https://www.sarkariresult.com/bihar/csbc-constable-prohibition-02-2023
+            </li>
+            <li>
+              https://www.sarkariresult.com/2021/uppsc-technical-edu-service-sep23/
+            </li>
+            <li>https://www.sarkariresult.com/2023/nta-ignou-jr-asst-mar23/</li>
+            <li>
+              https://www.sarkariresult.com/2023/up-polytechnic-jeecup-2023/
+            </li>
+            <li>
+              https://www.sarkariresult.com/mp/mp-esb-high-school-hstst-may23/
+            </li>
+            <li>https://www.sarkariresult.com/bank/ibps-rrb-xii-2023/</li>
+            <li>https://www.sarkariresult.com/force/afcat-02-2023/</li>
+            <li>
+              https://www.sarkariresult.com/mp/mp-esb-high-school-hstst-may23/
+            </li>
+            <li>https://www.sarkariresult.com/force/bsf-latest-upcoming/</li>
+            <li>https://www.sarkariresult.com/bank/rbi-officers-b-may23/</li>
+            <li>https://www.sarkariresult.com/2023/uprtou-bed-2023/</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="rs">Latest Jobs</div>
+        <div class="link">
+          <ul>
+            <li>https://www.sarkariresult.com/bank/ibps-13th-aug23/</li>
+            <li>
+              https://www.sarkariresult.com/2023/aai-jr-executive-03-2023/
+            </li>
+            <li>https://www.sarkariresult.com/bank/niacl-ao-aug23/</li>
+            <li>
+              https://www.sarkariresult.com/2023/kgmu-nursing-officer-jul23/
+            </li>
+            <li>https://www.sarkariresult.com/bank/ippb-executive-jul23/</li>
+            <li>https://www.sarkariresult.com/airforce-intake-01-2024/</li>
+            <li>https://www.sarkariresult.com/bank/ippb-executive-jul23/</li>
+            <li>https://www.sarkariresult.com/bihar/bpsc-assistant-06-22/</li>
+            <li>https://www.sarkariresult.com/2023/ccil-various-post-jul23/</li>
+            <li>https://www.sarkariresult.com/rajasthan-housing-jul23/</li>
+            <li>
+              https://www.sarkariresult.com/rssmsb-agriculture-super-06-23/
+            </li>
+            <li>https://www.sarkariresult.com/rajasthan-jpa-jul23/</li>
+            <li>https://www.sarkariresult.com/bihar/bpsc-69-pre-2023/</li>
+            <li>https://www.sarkariresult.com/rpsc/rsmssb-anm-gnm-23/</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trust">
+        <div class="trust1">
+          Why trust Sarkari Result.com for Sarkari Result?
+        </div>
+        <div class="trust2">
+          SarkariResult.Com You also know the name of Sarkari Result, this is
+          not only a website but it is the trust of millions of unemployed youth
+          / studying youth. Sarkari Result was established on 01 Jan 2012 and
+          since then this Sarkari Result website is a trust and trust in which
+          crores of youth are looking for government job/exam result/admit
+          card/exam date information. Sarkari Result is the first and most
+          accurate information reaches the youth, for which the entire team of
+          Sarkari Result works 24x7. Whenever a new exam result comes, exam
+          admit card comes or any new government job, whether SSC / UPSC / state
+          government or any other recruitment comes by the central government,
+          first of all the youth open the Sarkari Result website and View
+          information.
+        </div>
+      </div>
+      <div class="footer">
+        <div class="qlink">
+          <h2>Quick Links</h2>
+          Sarkari Result @Twitter <br />
+          Sarkari Result @Telegram <br />
+          Sarkari Result @Instagram <br />
+          Sarkari Result @Koo <br />
+          Sarkari Result @Facebook <br />
+          Sarkari Result @Linkedin <br />
+          Sarkari Result @Youtube <br />
+          Sarkari Result Contact Us <br />
+          All Board Exams
+        </div>
+        <div class="app">
+          <h2>Apps</h2>
+          Android App <br />
+          Apple IOS App <br />
+          Window App
+        </div>
+        <div class="more">
+          <h2>More</h2>
+          BPSC <br />
+          UPSSSC <br />
+          CCC <br />
+          UP-scholorship <br />
+          IBPS <br />
+          SSC <br />
+        </div>
+        <div class="a">
+          UPSC <br />
+          Air Force <br />
+          Coast Guard <br />
+          Police Vacancy<br />
+          Delhi Dssb <br />
+          Railway
+        </div>
+        <div class="b">
+          UPPCS
+          <br />
+          Navy <br />
+          RPSC <br />
+          HSSC <br />
+          TET <br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

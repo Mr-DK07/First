@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .keyboard {
+        height: 420px;
+        width: 1350px;
+        background: #000000;
+        border-radius: 6px;
+        box-shadow: 7px 7px 3px rgb(47, 121, 151);
+      }
+      .alpha {
+        height: 420px;
+        width: 900px;
+        float: left;
+      }
+      .fn {
+        height: 420px;
+        width: 200px;
+        float: left;
+      }
+      .num {
+        height: 420px;
+        width: 250px;
+        float: left;
+      }
+      .dvsn1 {
+        height: 70px;
+        width: 900px;
+        box-sizing: border-box;
+      }
+      .dvsn2 {
+        height: 70px;
+        width: 200px;
+        box-sizing: border-box;
+      }
+      .dvsn3 {
+        height: 70px;
+        width: 250px;
+        box-sizing: border-box;
+      }
+      .dvsn32 {
+        height: 140px;
+        width: 250px;
+        box-sizing: border-box;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .box {
+        height: 51px;
+        width: 51px;
+        background: rgb(150, 222, 222);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 4;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .esc {
+        height: 50px;
+        width: 91px;
+        background: rgb(110, 127, 214);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .enter {
+        height: 50px;
+        width: 100px;
+        background: rgb(237, 255, 45);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .shift {
+        height: 50px;
+        width: 130px;
+        background: rgb(228, 51, 51);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .opt {
+        height: 50px;
+        width: 80px;
+        background: rgb(217, 248, 40);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .bs {
+        height: 50px;
+        width: 297px;
+        background: rgb(255, 50, 50);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .box1 {
+        height: 51px;
+        width: 51px;
+        background: rgb(150, 222, 222);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        margin-left: 70px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .box2 {
+        height: 118px;
+        width: 50px;
+        background: rgb(255, 255, 0);
+        margin-top: 10px;
+        border: 2px solid black;
+        border-radius: 6px;
+        margin-left: 191px;
+        margin-bottom: 10px;
+        line-height: 50px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 20px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .box5 {
+        height: 51px;
+        width: 51px;
+        background: rgb(150, 222, 222);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        border-radius: 6px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+      .zero {
+        height: 50px;
+        width: 110px;
+        background: rgb(132, 132, 232);
+        box-sizing: border-box;
+        float: left;
+        border: 2px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 6px;
+        box-shadow: 4px 4px 3px rgb(169, 210, 226);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboard">
+      <div class="alpha">
+        <div class="dvsn1">
+          <div class="esc">esc</div>
+          <div class="box">F1</div>
+          <div class="box">F2</div>
+          <div class="box">F3</div>
+          <div class="box">F4</div>
+          <div class="box">F5</div>
+          <div class="box">F6</div>
+          <div class="box">F7</div>
+          <div class="box">F8</div>
+          <div class="box">F9</div>
+          <div class="box">F10</div>
+          <div class="box">F11</div>
+          <div class="box">F12</div>
+          <div class="box">^</div>
+        </div>
+        <div class="dvsn1">
+          <div class="box">~</div>
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">0</div>
+          <div class="box">-</div>
+          <div class="box">=</div>
+          <div class="esc">delete</div>
+        </div>
+        <div class="dvsn1">
+          <div class="esc">tab</div>
+          <div class="box">Q</div>
+          <div class="box">W</div>
+          <div class="box">E</div>
+          <div class="box">R</div>
+          <div class="box">T</div>
+          <div class="box">Y</div>
+          <div class="box">U</div>
+          <div class="box">I</div>
+          <div class="box">O</div>
+          <div class="box">P</div>
+          <div class="box">{</div>
+          <div class="box">}</div>
+          <div class="box">\</div>
+        </div>
+        <div class="dvsn1">
+          <div class="enter">.caps lock</div>
+          <div class="box">A</div>
+          <div class="box">S</div>
+          <div class="box">D</div>
+          <div class="box">F</div>
+          <div class="box">G</div>
+          <div class="box">H</div>
+          <div class="box">J</div>
+          <div class="box">K</div>
+          <div class="box">L</div>
+          <div class="box">:;</div>
+          <div class="box">"</div>
+          <div class="enter">enter</div>
+        </div>
+        <div class="dvsn1">
+          <div class="shift">shift</div>
+          <div class="box">Z</div>
+          <div class="box">X</div>
+          <div class="box">C</div>
+          <div class="box">V</div>
+          <div class="box">B</div>
+          <div class="box">N</div>
+          <div class="box">M</div>
+          <div class="box"><,</div>
+          <div class="box">>.</div>
+          <div class="box">?/</div>
+          <div class="shift">shift</div>
+        </div>
+        <div class="dvsn1">
+          <div class="esc">^ control</div>
+          <div class="opt">option</div>
+          <div class="esc">command</div>
+          <div class="bs"></div>
+          <div class="esc">command</div>
+          <div class="opt">option</div>
+          <div class="esc">control</div>
+        </div>
+      </div>
+      <div class="fn">
+        <div class="dvsn2">
+          <div class="box">F13</div>
+          <div class="box">F14</div>
+          <div class="box">F15</div>
+        </div>
+        <div class="dvsn2">
+          <div class="box">fn</div>
+          <div class="box">home</div>
+          <div class="box">pgup</div>
+        </div>
+        <div class="dvsn2">
+          <div class="box">delete</div>
+          <div class="box">end</div>
+          <div class="box">pdwn</div>
+        </div>
+        <div class="dvsn2"></div>
+        <div class="dvsn2">
+          <div class="box1">^</div>
+        </div>
+
+        <div class="dvsn2">
+          <div class="box"><</div>
+          <div class="box"></div>
+          <div class="box">></div>
+        </div>
+      </div>
+      <div class="num">
+        <div class="dvsn3">
+          <div class="box">F16</div>
+          <div class="box">F17</div>
+          <div class="box">F18</div>
+          <div class="box">F19</div>
+        </div>
+        <div class="dvsn3">
+          <div class="box">clear</div>
+          <div class="box">=</div>
+          <div class="box">/</div>
+          <div class="box">*</div>
+        </div>
+        <div class="dvsn3">
+          <div class="box">7</div>
+          <div class="box">8</div>
+          <div class="box">9</div>
+          <div class="box">-</div>
+        </div>
+        <div class="dvsn3">
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+          <div class="box">+</div>
+        </div>
+        <div class="dvsn32">
+          <div class="box5">1</div>
+          <div class="box5">2</div>
+          <div class="box5">3</div>
+          <div class="zero">0</div>
+          <div class="box">.</div>
+          <div class="box2">enter</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
