@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devendra Kumar :Techpile- ST231228 Test1</title>
+    <link rel="stylesheet" href="../btstrap/css/all.css" />
+    <link rel="stylesheet" href="../btstrap/css/bootstrap.css" />
+    <style>
+      #outer {
+        min-height: 1000px;
+        width: 1200px;
+        overflow-y: scroll;
+      }
+      .social {
+        height: 100px;
+        width: 1200px;
+        background: #000000;
+      }
+      #header {
+        height: 118px;
+        width: 1200px;
+      }
+      .logo {
+        height: 100px;
+        width: 600px;
+        float: left;
+      }
+      .eml {
+        height: 100px;
+        width: 190px;
+        font-family: sans-serif;
+        float: left;
+        padding-top: 30px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        color: rgb(27, 117, 87);
+        border-left: 1px solid black;
+      }
+      p {
+        color: black;
+        font-size: 19px;
+        font-weight: 600;
+      }
+      .btn {
+        height: 50px;
+        width: 170px;
+        border-radius: 10px;
+        border: 2px solid rgb(4, 4, 120);
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+      .btn:hover {
+        background: #f3cf04;
+      }
+      .menu {
+        height: 50px;
+        width: 1200px;
+        background: green;
+      }
+      .menu1 {
+        height: 50px;
+        width: 150px;
+        background: #938686;
+        float: left;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        background: green;
+        border-left: 2px white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .menu1:hover {
+        background: #30af10;
+      }
+      .search {
+        height: 50px;
+        width: 260px;
+        padding-top: 19px;
+        float: left;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #598b4b;
+        line-height: 7px;
+        font-size: 13px;
+        padding-left: 25px;
+        box-sizing: border-box;
+      }
+      .slider {
+        height: 500px;
+        width: 1200px;
+        box-sizing: border-box;
+        background: url(https://media.istockphoto.com/id/980838288/photo/closeup-hands-of-freelancer-woman-working-using-digital-laptop-computer-and-drink-coffee.jpg?s=612x612&w=0&k=20&c=P7jc2GnJaCW5w9TwSBSVeAkXMAQn1MF9I3_3ZcWubWk=);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .im {
+        height: 400px;
+        width: 600px;
+        padding-top: 100px;
+        padding-left: 30px;
+        box-sizing: border-box;
+        float: left;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .im p {
+        font-weight: 1;
+      }
+      h1 {
+        margin-top: 4px;
+        font-weight: 700;
+      }
+      .btn1 {
+        height: 50px;
+        width: 180px;
+        border-radius: 10px;
+        background: rgb(230, 161, 33);
+        font-size: 17px;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 20px;
+        border: none;
+        color: white;
+      }
+      .btn1:hover {
+        background: #cfd305;
+      }
+
+      .data {
+        height: 150px;
+        width: 250px;
+        color: white;
+        float: left;
+        transform: translateY(-40px);
+        background: orange;
+        text-align: center;
+        line-height: 15px;
+        padding-top: 25px;
+        box-sizing: border-box;
+      }
+      .d {
+        margin-left: 200px;
+      }
+      .data1 {
+        height: 150px;
+        width: 250px;
+        color: white;
+        float: left;
+        transform: translateY(-40px);
+        background: blueviolet;
+        text-align: center;
+        padding-top: 25px;
+        box-sizing: border-box;
+        line-height: 15px;
+      }
+      .data p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 1;
+        padding: 10px;
+      }
+      .data1 p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 1;
+        padding: 10px;
+      }
+      .data1 p1 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 1;
+        margin-right: 55px;
+      }
+      .data2 p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 1;
+        padding: 10px;
+      }
+
+      .data1 h3 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 1;
+        margin-top: 2px;
+      }
+      .data h3 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 1;
+        margin-top: 2px;
+      }
+      .data2 h3 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 1;
+        margin-top: 2px;
+      }
+      .crcl {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 2px solid rgb(199, 131, 4);
+        background: white;
+        margin-left: 110px;
+        margin-top: 26px;
+        color: orange;
+        text-align: center;
+        padding-top: 4px;
+        font-weight: 800;
+      }
+      .crcl1 {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 2px solid blueviolet;
+        background: white;
+        margin-left: 100px;
+        margin-top: -8px;
+
+        color: blueviolet;
+        text-align: center;
+        padding-top: 4px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="header">
+        <div class="logo"><img src="img/m7IaLO_k_400x400.jpg" alt="" /></div>
+        <div class="eml">
+          EMAIL <br />
+          <p>info@edumart.org</p>
+        </div>
+        <div class="eml">
+          TOLL FREE <br />
+          <p>1800 000 0000</p>
+        </div>
+        <div class="eml">
+          <input class="btn" type="submit" value="Student Login" />
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu1">HOME</div>
+        <div class="menu1">ABOUT</div>
+        <div class="menu1">OUR COURSES</div>
+        <div class="menu1">GALLERY</div>
+        <div class="menu1">PAGES</div>
+        <div class="menu1">CONTACT</div>
+        <div class="search">
+          SEARCH NOW
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><br />_______________________________
+        </div>
+      </div>
+      <div class="slider">
+        <div class="im"></div>
+        <div class="im">
+          <h3>EXPLORE THE WORLD OF</h3>
+          <h1>OUR GRADUATES</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <input class="btn1" type="submit" value="KNOW MORE" />
+        </div>
+      </div>
+      <div class="d">
+        <div class="data">
+          <h3>APPLY ONLINE</h3>
+          <p>Lorem ipsum dolor sit amet dollor revia summon.</p>
+          <div class="crcl">></div>
+        </div>
+        <div class="data1">
+          <p1>DOWNLOAD</p1> <br />
+          <h3>PROSPECTUS</h3>
+          <p>Lorem ipsum sit amet consectetur great with serie.</p>
+          <div class="crcl1">></div>
+        </div>
+        <div class="data">
+          <h3>CERTIFICATION</h3>
+          <p>Lorem ipsum dolor sit consectetur golf ball play.</p>
+          <div class="crcl">></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

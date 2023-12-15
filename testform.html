@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #form {
+        height: 600px;
+        width: 800px;
+        background: repeating-linear-gradient(
+          90deg,
+          rgb(29, 5, 104) 0%,
+          rgb(160, 5, 191) 100%
+        );
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding-top: 50px;
+        margin: 150px auto;
+      }
+      #forma {
+        height: 500px;
+        width: 600px;
+        background: white;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        border-radius: 16px;
+      }
+      .logo {
+        height: 500px;
+        width: 300px;
+        float: left;
+      }
+
+      .logo1 {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Z1-KzthkCKj2kS0pPp8PW3qq5UbiPhojEA&usqp=CAU);
+        background-repeat: no-repeat;
+        margin-top: 150px;
+        margin-left: 30px;
+      }
+      .info {
+        height: 500px;
+        width: 300px;
+        float: left;
+        margin-top: 100px;
+        color: #000;
+        text-align: center;
+        font-size: 26px;
+        font-family: sans-serif;
+        font-weight: 700;
+      }
+      .login {
+        margin: 20px;
+        height: 40px;
+        width: 250px;
+        border-radius: 26px;
+        border: none;
+        background: #eadddd;
+        padding-left: 20px;
+        font-weight: 700;
+        box-sizing: border-box;
+      }
+      .btn {
+        margin: 20px;
+        height: 40px;
+        width: 250px;
+        border-radius: 26px;
+        border: none;
+        background: #308807;
+        padding-left: 8px;
+        color: white;
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+      p2 {
+        font-size: 16px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form">
+      <div id="forma">
+        <div class="logo">
+          <div class="logo1"></div>
+        </div>
+        <div class="info">
+          Member Login
+          <form action="">
+            <input class="login" type="email" placeholder="Email" />
+            <input class="login" type="password" placeholder="......" /> <br />
+            <input class="btn" type="submit" value="Login" /> <br />
+            <p>Forgot <p2> Username / Password ?</p2></p>
+            <p2>Create your account ---</p2>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
